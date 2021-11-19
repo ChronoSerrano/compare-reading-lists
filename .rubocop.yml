@@ -1,5 +1,6 @@
 AllCops:
   NewCops: enable
+  TargetRubyVersion: 3.0
 
 Metrics/BlockLength:
   Exclude:
@@ -8,3 +9,7 @@ Metrics/BlockLength:
 Style/OpenStructUse:
   Exclude:
     - 'config/environment.rb'
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+  ConsistentQuotesInMultiline: false

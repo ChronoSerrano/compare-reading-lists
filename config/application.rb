@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require './config/environment'
-$LOAD_PATH.unshift Config.root.join('lib')
+require "./config/environment"
+$LOAD_PATH.unshift Config.root.join("lib")
 
 # Connect to database
-OTR::ActiveRecord.configure_from_file! Config.root.join('config', 'database.yml')
+OTR::ActiveRecord.configure_from_file! Config.root.join("config", "database.yml")
 OTR::ActiveRecord.establish_connection!
 
 # Load application
