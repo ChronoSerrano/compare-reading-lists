@@ -1,0 +1,8 @@
+development:
+  adapter: postgresql
+  database: yfluvofx
+  host: otto.db.elephantsql.com
+  user: yfluvofx
+  password: i8GoeKUCN4iE-i1ehjNG5YN7myr_e5k9
+  pool: 5
+  schema_search_path: "reading_list"

@@ -1,0 +1,10 @@
+AllCops:
+  NewCops: enable
+
+Metrics/BlockLength:
+  Exclude:
+    - 'database/schema.rb'
+
+Style/OpenStructUse:
+  Exclude:
+    - 'config/environment.rb'
