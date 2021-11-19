@@ -55,12 +55,12 @@ puts "There are now #{Calibre.count} rows in the calibre table"
 load_csv(filename: "librarything.tsv", separator: "\t", quote_char: nil).each do |row|
   t = LibraryThing.new
   t.isbn = if row["ISBNs"].nil?
-             ""
-           elsif row["ISBNs"][/\d{13}/].present?
-             row["ISBNs"][/\d{13}/]
-           elsif row["ISBNs"][/\b\d{9}(\d|X)\b/].present?
-             row["ISBNs"][/\b\d{9}(\d|X)\b/]
-           end
+    ""
+  elsif row["ISBNs"][/\d{13}/].present?
+    row["ISBNs"][/\d{13}/]
+  elsif row["ISBNs"][/\b\d{9}(\d|X)\b/].present?
+    row["ISBNs"][/\b\d{9}(\d|X)\b/]
+  end
   t.BookId = row["Book Id"]
   t.Title = row["Title"]
   t.PrimaryAuthor = row["Primary Author"]
